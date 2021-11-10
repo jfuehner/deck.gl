@@ -10,6 +10,8 @@ test/**/*-failed.png
 dist-demo/
 dist-bundle.js
 
+tsconfig.tsbuildinfo
+
 examples/winds/data/*.html
 mapbox-token.js
 TODO

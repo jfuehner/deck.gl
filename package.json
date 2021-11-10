@@ -23,6 +23,8 @@
     "bootstrap": "PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true yarn && ocular-bootstrap",
     "clean": "ocular-clean",
     "build": "ocular-clean && ocular-build && lerna run build",
+    "tsclean": "find . -name tsconfig.tsbuildinfo -exec rm {} \\;",
+    "tsbuild": "tsc -b tsconfig.build.json && scripts/add-js-to-imports.sh",
     "version": "ocular-build core",
     "lint": "ocular-lint",
     "cover": "ocular-test cover",
@@ -65,7 +67,7 @@
     "gl": "^4.9.0",
     "glsl-transpiler": "^1.8.3",
     "jsdom": "^15.0.0",
-    "ocular-dev-tools": "1.0.0-alpha.7",
+    "ocular-dev-tools": "^0.3.1",
     "pre-commit": "^1.2.2",
     "pre-push": "^0.1.1",
     "raw-loader": "^0.5.1",
@@ -73,7 +75,6 @@
     "react-dom": "^16.2.0",
     "react-map-gl": "^5.1.0",
     "s2-geometry": "^1.2.10",
-    "tape-catch": "^1.0.6",
     "typescript": "^4.2.3"
   },
   "pre-commit": [
@@ -82,6 +83,5 @@
   ],
   "engines": {
     "node": ">=14"
-  },
-  "dependencies": {}
+  }
 }
